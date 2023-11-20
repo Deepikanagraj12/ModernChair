@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    overflow-x: none;
+    background-color: black;
+    color: aliceblue;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+#wrapper {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+ .container{
+    position: relative;
+    max-width:calc(100%-40px) ;
+    width: 860px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.scroll{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  visibility: hidden;
+}
+
+.clr-btn:checked + label,
+.clr-btn:not(:checked) + label {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    transition: all 200ms linear;
+    border-radius: 4px;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    color: #ffeba7;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid transparent;
+    margin-right: 8px;
+    z-index: 10;
+
+}
+ 
+label.clr1{
+    margin-left: 500px;
+    background-image: url("./images/color1.jpg");
+}
+label.clr2{
+    background-image: url("./images/color2.jpg");
+}
+label.clr3{
+    background-image: url("./images/color3.jpg");
+}
+label.clr4{
+    background-image: url("./images/color4.jpg");
+}
+label.clr5{
+    background-image: url("./images/color5.jpg");
+}
+label.clr6{
+    background-image: url("./images/color6.jpg");
+}
+
+.img{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: inline-block;
+    width: 500px;
+    height: 410px;
+    z-index: 9;
+    transition: all 550ms linear;
+    transition-delay: 100ms;
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url("./images/chair1.png");
+    opacity: 0;
+}
+
+.for-clr1:checked  ~ .img.chair1{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.img.chair2{
+    background-image: url("./images/chair2.png");
+}
+.for-clr2:checked  ~ .img.chair2{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.img.chair3{
+    background-image: url("./images/chair3.png");
+}
+.for-clr3:checked  ~ .img.chair3{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.img.chair4{
+    background-image: url("./images/chair4.png");
+}
+.for-clr4:checked  ~ .img.chair4{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.img.chair5{
+    background-image: url("./images/chair5.png");
+}
+.for-clr5:checked  ~ .img.chair5{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.img.chair6{
+    background-image: url("./images/chair6.png");
+}
+.for-clr6:checked  ~ .img.chair6{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0) rotate(-1deg);
+    }
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0) rotate(2deg);
+    }
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-3px, 0, 0) rotate(-3deg);
+    }
+    40%,
+    60% {
+      transform: translate3d(3px, 0, 0) rotate(3deg);
+    }
+  }
+
+  .bg-color{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+    background-image:linear-gradient(196deg, #f1a9a9, #e66767) ;
+    transition: all 250ms linear;
+    transition-delay: 250ms;
+  }
+
+  .bg-color.chair2{
+    background-image: linear-gradient(196deg, #4c4c4c, #262626);
+    opacity: 0;
+  }
+  .for-clr2:checked ~ .bg-color.chair2 {
+    opacity: 1;
+  }
+  .bg-color.chair3{
+    background-image: linear-gradient(196deg, #8a9fb2, #5f7991);
+    opacity: 0;
+  }
+  .for-clr3:checked ~ .bg-color.chair3  {
+    opacity: 1;
+  }
+  .bg-color.chair4{
+    background-image: linear-gradient(196deg, #97afc3, #6789a7);
+    opacity: 0;
+  }
+  .for-clr4:checked ~ .bg-color.chair4  {
+    opacity: 1;
+  }
+  .bg-color.chair5{
+    background-image: linear-gradient(196deg, #afa6a0, #8c7f76);
+    opacity: 0;
+  }
+  .for-clr5:checked ~ .bg-color.chair5 {
+    opacity: 1;
+  }
+  .bg-color.chair6 {
+    background-image: linear-gradient(196deg, #aaadac, #838786);
+    opacity: 0;
+  }
+  .for-clr6:checked ~ .bg-color.chair6  {
+    opacity: 1;
+  }
+
+  .info {
+    position: relative;
+    margin-left: 500px;
+    z-index: 10;
+    display: block;
+    text-align: left;
+  }
+
+  h3 span{
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+
+  h4{
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+
+  .desc-btn:checked + label,
+  .desc-btn:not(:checked) + label{
+    position: relative;
+    transition: all 200ms linear;
+    display:inline-block;
+    border:none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.5;
+    margin-right: 25px;
+    line-height: 1.2;
+  }
+
+  .desc-btn:checked + label{
+    opacity: 1;
+  }
+  .desc-btn:not(:checked) + label:hover{
+    opacity: 0.8;
+  }
+
+  .sec{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    transition: all 250ms linear;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translateY(20px);
+  }
+
+  .sec.detail{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  #Description:checked ~ .sec.descrep {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  #Details:checked ~ .sec.detail {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .dem{
+    position:relative;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .dem p span {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .info-wrap {
+    position: relative;
+    margin-left: 500px;
+    z-index: 10;
+    display: block;
+    text-align: left;
+  }
+  .btn {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2;
+    height: 48px;
+    border-radius: 4px;
+    width: 210px;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: rgba(154, 214, 234, 0.373);
+    color: #fff;
+    box-shadow: 0 6px 15px 0 rgba(16, 39, 112, 0.15);
+    text-decoration: none;
+    margin-top: 50px;
+  }
+
+ 
